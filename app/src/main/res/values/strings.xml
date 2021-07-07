@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Ekspedisi MLG</string>
+    <string name="logo_description">Logo</string>
+    <string name="email_label_text">Email</string>
+    <string name="email_text_hint">emailmu@mail.com</string>
+    <string name="password_label_text">Password</string>
+    <string name="password_text_hint">6+ karakter</string>
+    <string name="btn_masuk_text">Masuk</string>
+    <string name="to_reg_hint_text">Belum memiliki akun ?</string>
+    <string name="btn_to_reg_text">Disini</string>
+    <string name="lbl_pertanyaan_2">Siapkah untuk bergabung bersama kami ?</string>
+    <string name="btn_pengirim_text">Pengirim</string>
+    <string name="btn_sopir_text">Sopir</string>
+    <string name="gabung_bersama_kami">Gabung bersama kami !</string>
+    <string name="first_name_text">First Name</string>
+    <string name="last_name_text">Last Name</string>
+    <string name="email_text">Email</string>
+    <string name="create_password">Create Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="btn_register_text">Register</string>
+    <string name="copyright_0">©2021 PT. Maju Lancar</string>
+    <string name="system_all_rights_reserved">System. All Rights Reserved</string>
 </resources>
