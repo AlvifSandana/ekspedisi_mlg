@@ -1,0 +1,2 @@
+rootProject.name = "Ekspedisi MLG"
+include ':app'
