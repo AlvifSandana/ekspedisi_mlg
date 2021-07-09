@@ -20,4 +20,14 @@
     <string name="btn_register_text">Register</string>
     <string name="copyright_0">©2021 PT. Maju Lancar</string>
     <string name="system_all_rights_reserved">System. All Rights Reserved</string>
+    <string name="menu_title_home">Home</string>
+    <string name="menu_title_profil">Profil</string>
+    <string name="menu_title_notifikasi">Notifikasi</string>
+    <string name="menu_title_pesanan">Pesanan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_profile_text">Profil</string>
+    <string name="profile_images_text">profile images</string>
+    <string name="lbl_pengaturan_text">PENGATURAN</string>
+    <string name="setting_icon">setting icon</string>
 </resources>
