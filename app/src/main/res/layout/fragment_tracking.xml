@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackingFragment">
+
+    <ImageView
+        android:id="@+id/logo_tracking_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mlg_logo"
+        android:contentDescription="@string/logo_description"/>
+
+    <TextView
+        android:id="@+id/lbl_cek_posisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo_tracking_fragment"
+        android:textSize="10pt"
+        android:textColor="@color/black"
+        android:text="@string/cek_posisi_paket_anda"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/no_resi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_below="@id/lbl_cek_posisi"
+        style="@style/CustomTextInputLayoutStyle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/grey"
+            android:elevation="2dp"
+            android:hint="@string/ketik_nomor_resi_anda"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_lacak"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/no_resi"
+        android:layout_marginHorizontal="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_lacak_text"/>
+
+    <TextView
+        android:id="@+id/lbl_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_lacak"
+        android:text="@string/lbl_riwayat_text"
+        android:textSize="9pt"
+        android:textColor="@color/black"/>
+
+    <View
+        android:id="@+id/divider_history"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lbl_riwayat"
+        android:background="@color/black"/>
+
+</RelativeLayout>

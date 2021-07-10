@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotifikasiFragment">
+
+    <ImageView
+        android:id="@+id/logo_notifikasi_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/mlg_logo"/>
+
+    <TextView
+        android:id="@+id/lbl_pesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/logo_notifikasi_fragment"
+        android:text="@string/lbl_pesan_text"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:checkedButton="@+id/jenis_pesan"
+        android:id="@+id/switch_pesan"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/lbl_pesan"
+        android:orientation="horizontal"
+        android:background="@drawable/toggle_background">
+
+        <RadioButton
+            android:id="@+id/unread"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/toggle_widget_background"
+            android:text="Sudah Dibaca"/>
+
+        <RadioButton
+            android:id="@+id/read"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/toggle_widget_background"
+            android:text="Belum Dibaca"/>
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notif_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_pesan"/>
+
+</RelativeLayout>

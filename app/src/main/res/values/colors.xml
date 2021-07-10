@@ -13,4 +13,5 @@
     <color name="blue_2">#4b84f1</color>
     <color name="materialTextfieldBoxStrokeColor" tools:override="true">#18a0fb</color>
     <color name="grey">#CECECE</color>
+    <color name="transparent">#0000000</color>
 </resources>
