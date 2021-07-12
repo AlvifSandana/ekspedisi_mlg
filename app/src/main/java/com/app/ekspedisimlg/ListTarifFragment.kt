@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [NotifikasiFragment.newInstance] factory method to
+ * Use the [ListTarifFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class NotifikasiFragment : Fragment() {
+class ListTarifFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class NotifikasiFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notifikasi, container, false)
+        return inflater.inflate(R.layout.fragment_list_tarif, container, false)
     }
 
     companion object {
@@ -44,18 +44,16 @@ class NotifikasiFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment NotifikasiFragment.
+         * @return A new instance of fragment ListTarifFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            NotifikasiFragment().apply {
+            ListTarifFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
-
-        fun getInstance(): NotifikasiFragment = NotifikasiFragment()
     }
 }
