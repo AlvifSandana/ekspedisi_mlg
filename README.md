@@ -4,7 +4,8 @@ Fitur yang sedang dikerjakan:
 
 #### Frontend
 - [x] Bottom Navigation
-- [ ] Fragment Home xml styles
+- [x] Fragment Home user xml styles
+- [x] Fragment Home Supir xml styles
 - [ ] Fragment Jadwal muatan xml styles
 - [x] Fragment Notifikasi xml styles
 - [x] Fragment User Profile xml styles

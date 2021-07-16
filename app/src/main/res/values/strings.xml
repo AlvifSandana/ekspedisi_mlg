@@ -37,4 +37,17 @@
     <string name="lbl_pesan_text">Pesan</string>
     <string name="notif_icon">notif icon</string>
     <string name="cari_berdasarkan_kota_nama">Cari berdasarkan kota / nama</string>
+    <string name="cek_tarif">Cek Tarif</string>
+    <string name="lokasi_penjemputan">Lokasi Penjemputan</string>
+    <string name="lokasi_pengiriman">Lokasi Pengiriman</string>
+    <string name="cek">Cek</string>
+    <string name="menu">Menu</string>
+    <string name="promo">Promo</string>
+    <string name="icon_btn_promo">icon btn_promo</string>
+    <string name="listongkir">List Ongkir</string>
+    <string name="listtarif">List Tarif</string>
+    <string name="pesanan">Pesanan</string>
+    <string name="tracking">Tracking</string>
+    <string name="lokasi_kantor">Lokasi Kantor</string>
+    <string name="tentang_kami">Tentang Kami</string>
 </resources>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/home_user_carousel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/lbl_cek_tarif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/home_user_carousel"
+        android:text="@string/cek_tarif"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_lokasi_penjemputan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/lbl_cek_tarif"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="30dp"
+        app:startIconDrawable="@android:drawable/ic_search_category_default"
+        app:boxStrokeColor="@color/blue_1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lokasi_penjemputan"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_lokasi_pengiriman"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/txt_lokasi_penjemputan"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="30dp"
+        app:boxStrokeColor="@color/blue_1"
+        app:startIconDrawable="@android:drawable/ic_search_category_default"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lokasi_pengiriman"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_cek_tarif"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/txt_lokasi_pengiriman"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cek"
+        style="@style/customHomeButtonStyle"/>
+
+    <TextView
+        android:id="@+id/lbl_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_cek_tarif"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/menu"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_promo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/lbl_menu"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_btn_promo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                android:contentDescription="@string/icon_btn_promo"/>
+
+            <TextView
+                android:id="@+id/txt_btn_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_btn_promo"
+                android:layout_centerHorizontal="true"
+                android:text="@string/promo"/>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_listtarif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/lbl_menu"
+        android:layout_toRightOf="@id/btn_promo"
+        android:layout_toEndOf="@id/btn_promo"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_btn_listtarif"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                android:contentDescription="@string/icon_btn_promo"/>
+
+            <TextView
+                android:id="@+id/txt_btn_listtarif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_btn_listtarif"
+                android:layout_centerHorizontal="true"
+                android:text="@string/listtarif"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_pesanan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/lbl_menu"
+        android:layout_toRightOf="@id/btn_listtarif"
+        android:layout_toEndOf="@id/btn_listtarif"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_btn_pesanan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                android:contentDescription="@string/icon_btn_promo"/>
+
+            <TextView
+                android:id="@+id/txt_btn_pesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_btn_pesanan"
+                android:layout_centerHorizontal="true"
+                android:text="@string/pesanan"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_tracking"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_promo"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_btn_tracking"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                android:contentDescription="@string/icon_btn_promo"/>
+
+            <TextView
+                android:id="@+id/txt_btn_tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_btn_tracking"
+                android:layout_centerHorizontal="true"
+                android:text="@string/tracking"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_lokasikantor"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_listtarif"
+        android:layout_toRightOf="@id/btn_tracking"
+        android:layout_toEndOf="@id/btn_tracking"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_btn_lokasikantor"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                android:contentDescription="@string/icon_btn_promo"/>
+
+            <TextView
+                android:id="@+id/txt_btn_lokasikantor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_btn_lokasikantor"
+                android:layout_centerHorizontal="true"
+                android:text="@string/lokasi_kantor"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_tentang_kami"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn_pesanan"
+        android:layout_toRightOf="@id/btn_lokasikantor"
+        android:layout_toEndOf="@id/btn_lokasikantor"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_btn_tentang_kami"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_credit_card_24"
+                android:contentDescription="@string/icon_btn_promo"/>
+
+            <TextView
+                android:id="@+id/txt_btn_tentang_kami"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_btn_tentang_kami"
+                android:layout_centerHorizontal="true"
+                android:text="@string/tentang_kami"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

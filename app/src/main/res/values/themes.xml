@@ -20,4 +20,7 @@
     <style name="CustomTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/materialTextfieldBoxStrokeColor</item>
     </style>
+    <style name="customHomeButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_home_rounded</item>
+    </style>
 </resources>
