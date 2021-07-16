@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         // define menu
-        var menu: Menu = bottom_navigation.menu
+        val menu: Menu = bottom_navigation.menu
         // get menu item
         selectedMenu(menu.getItem(0))
         // set listener for selected menu item
