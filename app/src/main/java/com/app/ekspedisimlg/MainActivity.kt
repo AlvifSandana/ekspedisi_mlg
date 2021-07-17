@@ -1,21 +1,28 @@
 package com.app.ekspedisimlg
 
+import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.app.ekspedisimlg.model.ListTarifModel
-import com.app.ekspedisimlg.retrofit.ApiService
+import com.app.ekspedisimlg.helpers.PreferenceHelper.customPreference
+import com.app.ekspedisimlg.helpers.PreferenceHelper.email
+import com.app.ekspedisimlg.helpers.PreferenceHelper.password
+import com.app.ekspedisimlg.helpers.PreferenceHelper.role
 import kotlinx.android.synthetic.main.activity_main.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    val okButtonClick = { dialog: DialogInterface, which: Int ->
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,55 +34,73 @@ class MainActivity : AppCompatActivity() {
         // get menu item
         selectedMenu(menu.getItem(0))
         // set listener for selected menu item
-        bottom_navigation.setOnNavigationItemSelectedListener {
-            item: MenuItem -> selectedMenu(item)
+        bottom_navigation.setOnNavigationItemSelectedListener { item: MenuItem ->
+            selectedMenu(item)
             false
         }
     }
 
     override fun onStart() {
         super.onStart()
-        getData()
+        // check if user not logged in, redirect to LoginActivity
+        if (!checkLoginState()) {
+            val builder = AlertDialog.Builder(this)
+            with(builder){
+                setTitle("Info")
+                setMessage("Silahkan login untuk melanjutkan.")
+                setPositiveButton("OK", DialogInterface.OnClickListener(function = okButtonClick))
+                show()
+            }
+        }
     }
 
     // open and change fragment when user selected menu item
-    fun selectedFragment(fragment: Fragment){
-        var transaction: FragmentTransaction? = supportFragmentManager.beginTransaction()
-        transaction?.replace(R.id.rootFragment, fragment)
-        transaction?.commit()
+    private fun selectedFragment(fragment: Fragment) {
+        // define fragment transaction
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        // replace content of fragment container with new fragment
+        transaction.replace(R.id.rootFragment, fragment)
+        // commit changes
+        transaction.commit()
     }
 
     // menu handler
-    private fun selectedMenu(item: MenuItem){
+    private fun selectedMenu(item: MenuItem) {
         item.isChecked = true
-        when(item.itemId){
+        when (item.itemId) {
+            R.id.home_page -> if (checkUserRole() == "pengirim") {
+                selectedFragment(HomeFragment.getInstance())
+            } else if (checkUserRole() == "supir") {
+                selectedFragment(HomeSupirFragment.getInstance())
+            }
+            R.id.profil_page -> selectedFragment(ProfileFragment.getInstance())
             R.id.notifikasi_page -> selectedFragment(NotifikasiFragment.getInstance())
         }
     }
 
-    fun getData(){
-        ApiService.endpoint.getListTarif()
-            .enqueue(object : Callback<ListTarifModel>{
-                override fun onResponse(
-                    call: Call<ListTarifModel>,
-                    response: Response<ListTarifModel>
-                ) {
-                    showData(response.body()!!)
-                }
-
-                override fun onFailure(call: Call<ListTarifModel>, t: Throwable) {
-                    printLog(t.toString())
-                }
-
-            })
+    // check login state
+    private fun checkLoginState(): Boolean {
+        val prefs = customPreference(this, "userdata")
+        return !(prefs.email == "" && prefs.password == "")
     }
 
-    fun showData(data: ListTarifModel){
-        val results = data.status
-        printLog(results)
+    // check user role
+    private fun checkUserRole(): String {
+        val prefs = customPreference(this, "userdata")
+        return when (prefs.role) {
+            "pengirim" -> {
+                "pengirim"
+            }
+            "supir" -> {
+                "supir"
+            }
+            else -> {
+                "error"
+            }
+        }
     }
 
-    fun printLog(msg: String){
-        Log.d("data", msg)
+    fun printLog(msg: String) {
+        Log.d("debug_log", msg)
     }
 }

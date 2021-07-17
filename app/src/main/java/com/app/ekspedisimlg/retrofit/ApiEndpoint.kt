@@ -1,8 +1,6 @@
 package com.app.ekspedisimlg.retrofit
 
-import com.app.ekspedisimlg.model.ListTarifModel
-import com.app.ekspedisimlg.model.LoginModel
-import com.app.ekspedisimlg.model.LoginResponseModel
+import com.app.ekspedisimlg.model.*
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -14,9 +12,30 @@ interface ApiEndpoint {
 
     @FormUrlEncoded
     @POST("auth/login/pengirim")
-    fun loginPengirim(logindata: List<LoginModel>): Call<LoginResponseModel>
+    fun loginPengirim(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<LoginResponseModel>
 
     @FormUrlEncoded
     @POST("auth/login/supir")
-    fun loginSupir(logindata: List<LoginModel>): Call<LoginResponseModel>
+    fun loginSupir(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<LoginResponseModel>
+
+    @FormUrlEncoded
+    @POST("auth/login/all")
+    fun loginAll(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<LoginResponseModel>
+
+    @FormUrlEncoded
+    @POST("auth/reg/pengirim")
+    fun regPengirim(regdata: List<RegisterPengirimModel>): Call<RegisterResponseModel>
+
+    @FormUrlEncoded
+    @POST("auth/reg/supir")
+    fun regSupir(regdata: List<RegisterSupirModel>): Call<RegisterSupirResponseModel>
 }

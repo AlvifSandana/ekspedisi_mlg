@@ -17,7 +17,7 @@ Fitur yang sedang dikerjakan:
 
 #### Backend
 - [ ] Register new user
-- [ ] Login new user
+- [x] Login new user
 - [ ] show notifikasi
 - [ ] show list tarif
 - [ ] user profile (update profile info and password)
