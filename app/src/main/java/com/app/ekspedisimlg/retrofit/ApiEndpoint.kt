@@ -33,9 +33,22 @@ interface ApiEndpoint {
 
     @FormUrlEncoded
     @POST("auth/reg/pengirim")
-    fun regPengirim(regdata: List<RegisterPengirimModel>): Call<RegisterResponseModel>
+    fun regPengirim(
+        @Field("nama_pengirim") nama_pengirim: String,
+        @Field("alamat_pengirim") alamat_pengirim: String,
+        @Field("nomor_telpon") nomor_telpon: String,
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<RegisterResponseModel>
 
     @FormUrlEncoded
     @POST("auth/reg/supir")
-    fun regSupir(regdata: List<RegisterSupirModel>): Call<RegisterSupirResponseModel>
+    fun regSupir(
+        @Field("nama_supir") nama_supir: String,
+        @Field("nama_supircadang") nama_supircadang: String,
+        @Field("alamat_supir") alamat_supir: String,
+        @Field("nomor_telpon") nomor_telpon: String,
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Call<RegisterSupirResponseModel>
 }

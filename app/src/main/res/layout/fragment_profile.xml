@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".fragments.ProfileFragment">
 
     <ImageView
         android:id="@+id/logo_profile_fragment"
@@ -52,21 +52,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:textStyle="bold"
-                android:text="Full name"/>
+                android:text="@string/full_name"/>
 
             <TextView
                 android:id="@+id/user_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="yourmail@example.com"/>
+                android:text="@string/yourmail_example_com"/>
 
             <TextView
                 android:id="@+id/user_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="081234567890"/>
+                android:text="@string/_081234567890"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -80,13 +80,16 @@
         android:text="@string/lbl_pengaturan_text"/>
 
     <LinearLayout
-        android:id="@+id/group_settings_1"
+        android:id="@+id/group_settings_info_pribadi"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="10dp"
         android:layout_below="@id/lbl_settings"
         android:weightSum="12"
         android:layout_marginHorizontal="20dp"
+        android:clickable="true"
+        android:focusable="true"
+
         android:orientation="horizontal">
 
         <TextView
@@ -94,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11.5"
-            android:text="Informasi Pribadi"
+            android:text="@string/informasi_pribadi"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -113,11 +116,11 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_below="@id/group_settings_1"
+        android:layout_below="@id/group_settings_info_pribadi"
         android:background="@color/grey"/>
 
     <LinearLayout
-        android:id="@+id/group_settings_2"
+        android:id="@+id/group_settings_password"
         android:layout_below="@id/divider"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -129,7 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11.5"
-            android:text="Password"
+            android:text="@string/password"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -148,11 +151,11 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_below="@id/group_settings_2"
+        android:layout_below="@id/group_settings_password"
         android:background="@color/grey"/>
 
     <LinearLayout
-        android:id="@+id/group_settings_3"
+        android:id="@+id/group_settings_membership"
         android:layout_below="@id/divider1"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -164,7 +167,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11.5"
-            android:text="Member"
+            android:text="@string/member"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -183,7 +186,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="25dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_below="@id/group_settings_3"
+        android:layout_below="@id/group_settings_membership"
         android:background="@color/grey"/>
 
     <TextView
@@ -210,7 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11.5"
-            android:text="Tentang Kami"
+            android:text="@string/tentang_kami"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -245,7 +248,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11.5"
-            android:text="Pusat Bantuan"
+            android:text="@string/pusat_bantuan"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -268,7 +271,7 @@
         android:background="@color/grey"/>
 
     <LinearLayout
-        android:id="@+id/group_about_3"
+        android:id="@+id/group_about_logout"
         android:layout_below="@id/divider5"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -280,7 +283,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11.5"
-            android:text="Keluar"
+            android:text="@string/keluar"
             android:textColor="@color/black"/>
 
         <ImageView
@@ -299,7 +302,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="25dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_below="@id/group_about_3"
+        android:layout_below="@id/group_about_logout"
         android:background="@color/grey"/>
 
 </RelativeLayout>

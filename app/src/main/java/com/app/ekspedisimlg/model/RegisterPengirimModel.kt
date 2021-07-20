@@ -1,5 +1,6 @@
 package com.app.ekspedisimlg.model
 
+
 data class RegisterPengirimModel(
     val nama_pengirim: String,
     val alamat_pengirim: String,

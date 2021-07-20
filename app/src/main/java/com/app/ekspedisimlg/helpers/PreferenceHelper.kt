@@ -121,4 +121,13 @@ object PreferenceHelper {
                 it.putString(USER_ADDRESS, value)
             }
         }
+
+    // clear value
+    var SharedPreferences.clearValues
+        get() = { }
+        set(value) {
+            editMe {
+                it.clear()
+            }
+        }
 }

@@ -1,4 +1,4 @@
-package com.app.ekspedisimlg
+package com.app.ekspedisimlg.activities
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -11,6 +11,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.app.ekspedisimlg.*
+import com.app.ekspedisimlg.fragments.HomeFragment
+import com.app.ekspedisimlg.fragments.HomeSupirFragment
+import com.app.ekspedisimlg.fragments.NotifikasiFragment
+import com.app.ekspedisimlg.fragments.ProfileFragment
 import com.app.ekspedisimlg.helpers.PreferenceHelper.customPreference
 import com.app.ekspedisimlg.helpers.PreferenceHelper.email
 import com.app.ekspedisimlg.helpers.PreferenceHelper.password
@@ -18,7 +23,7 @@ import com.app.ekspedisimlg.helpers.PreferenceHelper.role
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val okButtonClick = { dialog: DialogInterface, which: Int ->
+    private val okButtonClick = { dialog: DialogInterface, which: Int ->
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
