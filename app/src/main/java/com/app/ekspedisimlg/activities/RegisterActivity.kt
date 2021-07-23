@@ -79,17 +79,31 @@ class RegisterActivity : AppCompatActivity() {
         val prefs = customPreference(this, "userdata")
 
         // define pengirim registration data
-        val datapengirim = RegisterPengirimModel(nama, alamat_pengirim = "-", nomor_telpon = "-", email, password)
+        val datapengirim =
+            RegisterPengirimModel(nama, alamat_pengirim = "-", nomor_telpon = "-", email, password)
 
         // define supir registration data
-        val datasupir = RegisterSupirModel(nama, nama_supircadang = "-", alamat_supir = "-", nomor_telpon = "-", email, password)
+        val datasupir = RegisterSupirModel(
+            nama,
+            nama_supircadang = "-",
+            alamat_supir = "-",
+            nomor_telpon = "-",
+            email,
+            password
+        )
 
         Log.d("regData", "supir: ${datasupir}\npengirim: ${datapengirim}")
         // password validation
         if (password == confirm_password) {
             // check when role = pengirim or supir
             when (role) {
-                "pengirim" -> ApiService.endpoint.regPengirim(datapengirim.nama_pengirim, datapengirim.alamat_pengirim, datapengirim.nomor_telpon, datapengirim.email, datapengirim.password)
+                "pengirim" -> ApiService.endpoint.regPengirim(
+                    datapengirim.nama_pengirim,
+                    datapengirim.alamat_pengirim,
+                    datapengirim.nomor_telpon,
+                    datapengirim.email,
+                    datapengirim.password
+                )
                     .enqueue(object : Callback<RegisterResponseModel> {
                         override fun onResponse(
                             call: Call<RegisterResponseModel>,
@@ -117,7 +131,14 @@ class RegisterActivity : AppCompatActivity() {
                         }
                     })
 
-                "supir" -> ApiService.endpoint.regSupir(datasupir.nama_supir, datasupir.nama_supircadang, datasupir.alamat_supir, datasupir.nomor_telpon, datasupir.email, datasupir.password)
+                "supir" -> ApiService.endpoint.regSupir(
+                    datasupir.nama_supir,
+                    datasupir.nama_supircadang,
+                    datasupir.alamat_supir,
+                    datasupir.nomor_telpon,
+                    datasupir.email,
+                    datasupir.password
+                )
                     .enqueue(object : Callback<RegisterSupirResponseModel> {
                         override fun onResponse(
                             call: Call<RegisterSupirResponseModel>,

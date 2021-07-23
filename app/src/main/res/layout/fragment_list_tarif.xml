@@ -36,8 +36,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleview_tarif"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
         android:padding="10dp"
-        android:layout_below="@id/txt_cari_tarif"/>
+        android:layout_below="@id/txt_cari_tarif"
+        tools:listitem="@layout/tarif_list_item"/>
 
 </RelativeLayout>

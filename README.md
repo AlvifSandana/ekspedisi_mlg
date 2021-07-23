@@ -16,9 +16,9 @@ Fitur yang sedang dikerjakan:
 - [ ] Fragment Tentang kami xml styles
 
 #### Backend
-- [ ] Register new user
+- [x] Register new user
 - [x] Login new user
 - [ ] show notifikasi
-- [ ] show list tarif
+- [x] show list tarif
 - [ ] user profile (update profile info and password)
-- [ ] retrieve data from restAPI
+- [x] retrieve data from restAPI

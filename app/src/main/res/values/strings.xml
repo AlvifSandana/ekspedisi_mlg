@@ -63,4 +63,6 @@
     <string name="lokasi_tujuanmuat">Lokasi Tujuan Muat</string>
     <string name="sudah_dibaca">Sudah Dibaca</string>
     <string name="belum_dibaca">Belum Dibaca</string>
+    <string name="lokasi">lokasi</string>
+    <string name="tarif">tarif</string>
 </resources>

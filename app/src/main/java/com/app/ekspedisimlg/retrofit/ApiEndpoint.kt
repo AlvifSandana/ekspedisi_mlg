@@ -7,7 +7,8 @@ import retrofit2.http.*
 interface ApiEndpoint {
     @GET("tarif")
     fun getListTarif(
-        @Header("api_token") api_token: String
+        @Header("api-token") api_token: String,
+        @Header("role") role: String
     ): Call<ListTarifModel>
 
     @FormUrlEncoded
