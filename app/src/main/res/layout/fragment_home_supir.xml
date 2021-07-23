@@ -100,7 +100,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_baseline_credit_card_24"
+                android:src="@drawable/promo"
                 android:contentDescription="@string/icon_btn_promo"/>
 
             <TextView
@@ -130,22 +130,22 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/icon_btn_listtarif"
+                android:id="@+id/icon_btn_listongkir"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_baseline_credit_card_24"
+                android:src="@drawable/ongkir"
                 android:contentDescription="@string/icon_btn_promo"/>
 
             <TextView
                 android:id="@+id/txt_btn_listtarif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/icon_btn_listtarif"
+                android:layout_below="@id/icon_btn_listongkir"
                 android:layout_centerHorizontal="true"
-                android:text="@string/listtarif"/>
+                android:text="@string/listongkir"/>
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -172,7 +172,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_baseline_credit_card_24"
+                android:src="@drawable/jadwalmuatan"
                 android:contentDescription="@string/icon_btn_promo"/>
 
             <TextView
@@ -208,7 +208,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_baseline_credit_card_24"
+                android:src="@drawable/tracking"
                 android:contentDescription="@string/icon_btn_promo"/>
 
             <TextView
@@ -245,7 +245,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_baseline_credit_card_24"
+                android:src="@drawable/maps_icon"
                 android:contentDescription="@string/icon_btn_promo"/>
 
             <TextView
@@ -282,7 +282,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_baseline_credit_card_24"
+                android:src="@drawable/tentangkami"
                 android:contentDescription="@string/icon_btn_promo"/>
 
             <TextView

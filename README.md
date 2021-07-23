@@ -7,6 +7,8 @@ Fitur yang sedang dikerjakan:
 - [x] Fragment Home user xml styles
 - [x] Fragment Home Supir xml styles
 - [ ] Fragment Jadwal muatan xml styles
+- [ ] Fragment Pesanan xml styles
+- [ ] Fragment Invoice xml styles 
 - [x] Fragment Notifikasi xml styles
 - [x] Fragment User Profile xml styles
 - [x] Fragment Register new user xml styles
