@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -103,6 +104,18 @@ class MainActivity : AppCompatActivity() {
                 "error"
             }
         }
+    }
+
+    private fun showNoGPSDialog(){
+        AlertDialog.Builder(this)
+            .setMessage("GPS tidak aktif. Aktifkan sekarang?")
+            .setCancelable(false)
+            .setPositiveButton("Ya") { _, _ ->
+                startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+            }
+            .setNegativeButton("Batal") {dialog, _ -> dialog.cancel() }
+            .create()
+            .show()
     }
 
     fun printLog(msg: String) {

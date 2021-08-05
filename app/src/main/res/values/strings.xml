@@ -65,4 +65,12 @@
     <string name="belum_dibaca">Belum Dibaca</string>
     <string name="lokasi">lokasi</string>
     <string name="tarif">tarif</string>
+    <string name="silahkan_isi_form_di_bawah_ini_ndengan_sesuai">Silahkan isi form di bawah ini dengan sesuai !</string>
+    <string name="nama_pengirim">Nama Pengirim</string>
+    <string name="alamat">Alamat</string>
+    <string name="nomor_telpon">Nomor Telpon</string>
+    <string name="tanggal_muat">Tanggal Muat</string>
+    <string name="lokasi_kirim">Lokasi Kirim</string>
+    <string name="catatan">Catatan :</string>
+    <string name="daftar">Daftar</string>
 </resources>
