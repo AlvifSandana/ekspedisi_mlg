@@ -73,4 +73,5 @@
     <string name="lokasi_kirim">Lokasi Kirim</string>
     <string name="catatan">Catatan :</string>
     <string name="daftar">Daftar</string>
+    <string name="icon_button">icon button</string>
 </resources>

@@ -7,13 +7,13 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/mlg_logo"
-        android:contentDescription="@string/logo_description" />
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/color" />
 
     <TextView
         android:id="@+id/lbl_tanya"

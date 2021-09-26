@@ -84,9 +84,9 @@
             android:id="@+id/jenis_muatan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txt_no_telp"
             android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@id/txt_no_telp"/>
+            android:layout_marginBottom="10dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txt_tanggal_muat"
