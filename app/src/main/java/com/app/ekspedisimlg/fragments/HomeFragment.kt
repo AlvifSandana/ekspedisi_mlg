@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.app.ekspedisimlg.R
@@ -13,12 +14,9 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
-    lateinit var buttonPromo: MaterialCardView
-    lateinit var buttonListTarif: MaterialCardView
-    lateinit var buttonPesanan: MaterialCardView
-    lateinit var buttonTracking: MaterialCardView
-    lateinit var buttonLokasiKantor: MaterialCardView
-    lateinit var buttonTentangKami: MaterialCardView
+    lateinit var buttonListTarif: CardView
+    lateinit var buttonTracking: CardView
+    lateinit var buttonLokasiKantor: CardView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,11 +29,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // define views from xml
-        buttonListTarif = btn_listtarif
         buttonLokasiKantor = btn_lokasikantor
-        buttonPesanan = btn_pesanan
-        buttonPromo = btn_promo
-        buttonTentangKami = btn_tentang_kami
         buttonTracking = btn_tracking
         // set button listener
         buttonListTarif.setOnClickListener {
