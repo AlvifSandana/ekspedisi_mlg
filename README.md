@@ -15,7 +15,7 @@ Fitur yang sedang dikerjakan:
 - [x] Fragment Login user xml styles
 - [x] Fragment Tracking xml styles
 - [x] Fragment List Tarif xml styles
-- [ ] Fragment Tentang kami xml styles
+- [x] Fragment Tentang kami xml styles
 
 #### Backend
 - [x] Register new user
