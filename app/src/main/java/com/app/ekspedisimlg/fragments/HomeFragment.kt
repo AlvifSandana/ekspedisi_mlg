@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.app.ekspedisimlg.R
-import com.google.android.material.card.MaterialCardView
+import com.app.ekspedisimlg.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -18,20 +17,29 @@ class HomeFragment : Fragment() {
     lateinit var buttonTracking: CardView
     lateinit var buttonLokasiKantor: CardView
 
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // define views from xml
-        buttonLokasiKantor = btn_lokasikantor
-        buttonTracking = btn_tracking
+        buttonLokasiKantor = binding.btnLokasikantor
+        buttonTracking = binding.btnTracking
+        buttonListTarif = binding.btnTarif
         // set button listener
+        buttonLokasiKantor.setOnClickListener {
+            gotoFragment(LokasiFragment())
+        }
         buttonListTarif.setOnClickListener {
             gotoFragment(ListTarifFragment())
         }
@@ -47,6 +55,10 @@ class HomeFragment : Fragment() {
         transaction.commit()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
     companion object {
         fun getInstance(): HomeFragment = HomeFragment()
     }

@@ -24,3 +24,7 @@ Fitur yang sedang dikerjakan:
 - [x] show list tarif
 - [ ] user profile (update profile info and password)
 - [x] retrieve data from restAPI
+- [ ] create, get pesanan
+- [ ] get invoice
+- [ ] show jadwal muatan
+- [ ] sync location every 5s

@@ -48,15 +48,25 @@ class ProfileFragment : Fragment() {
         }
     }
 
+    /**
+     * button confirm logout
+     */
     private val positiveButtonClick = { dialog: DialogInterface, which: Int ->
         clearPreference()
         restartActivity()
     }
 
+    /**
+     * method restart activity
+     * setelah logout
+     */
     private fun restartActivity() {
         getActivity()?.recreate()
     }
 
+    /**
+     * method hapus SharedPreference
+     */
     private fun clearPreference() {
         context?.getSharedPreferences("userdata", Context.MODE_PRIVATE)?.edit()?.clear()?.apply()
     }
