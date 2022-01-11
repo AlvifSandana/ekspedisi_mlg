@@ -109,6 +109,7 @@ class RegisterActivity : AppCompatActivity() {
                             call: Call<RegisterResponseModel>,
                             response: Response<RegisterResponseModel>
                         ) {
+                            Log.d("Res Register", response.body().toString());
                             if (response.body()?.status == "success") {
                                 Toast.makeText(
                                     this@RegisterActivity,
@@ -144,6 +145,7 @@ class RegisterActivity : AppCompatActivity() {
                             call: Call<RegisterSupirResponseModel>,
                             response: Response<RegisterSupirResponseModel>
                         ) {
+                            Log.d("Res Register", response.body().toString());
                             if (response.body()?.status == "success") {
                                 Toast.makeText(
                                     this@RegisterActivity,

@@ -4,12 +4,38 @@ import com.app.ekspedisimlg.model.*
 import retrofit2.Call
 import retrofit2.http.*
 
+/**
+ * API Endpoints
+ *
+ * seluruh endpoint yang digunakan oleh app ini dan
+ * disediakan oleh web admin pengiriman.
+ */
 interface ApiEndpoint {
     @GET("tarif")
     fun getListTarif(
         @Header("api-token") api_token: String,
         @Header("role") role: String
     ): Call<ListTarifModel>
+
+    @GET("pesanan")
+    fun getPesanan(
+        @Header("api-token") api_token: String,
+        @Header("role") role: String
+    ): Call<PesananModel>
+
+    @POST("pesanan/create")
+    fun createPesanan(
+        @Field("jenis_muatan") jenis_muatan: String,
+        @Field("berat_muatan") berat_muatan: String,
+        @Field("lokasi_kirim") lokasi_kirim: String,
+        @Field("catatan") catatan: String,
+    ): Call<PesananResponseModel>
+
+    @GET("muatan")
+    fun getMuatan(
+        @Header("api-token") api_token: String,
+        @Header("role") role: String
+    ): Call<MuatanResponseModel>
 
     @FormUrlEncoded
     @POST("auth/login/pengirim")

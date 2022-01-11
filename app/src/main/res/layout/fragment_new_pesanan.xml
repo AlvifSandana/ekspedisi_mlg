@@ -15,134 +15,149 @@
         android:src="@drawable/mlg_logo"
         android:contentDescription="@string/logo_description"/>
 
-    <RelativeLayout
-        android:id="@+id/container_new_pesanan"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:padding="10dp"
-        android:background="@drawable/border_container"
         android:layout_below="@id/logo_new_pesanan_fragment">
-
-        <TextView
-            android:id="@+id/lbl_form_new_pesanan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/silahkan_isi_form_di_bawah_ini_ndengan_sesuai"
-            android:textStyle="bold"
-            android:textSize="10pt"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_nama_pengirim"
+        <RelativeLayout
+            android:id="@+id/container_new_pesanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lbl_form_new_pesanan"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginHorizontal="25dp"
+            android:background="@drawable/border_container"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lbl_form_new_pesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/silahkan_isi_form_di_bawah_ini_ndengan_sesuai"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_nama_pengirim"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/nama_pengirim"
-                android:inputType="textFilter"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_form_new_pesanan"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_alamat_pengirim"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_nama_pengirim"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/nama_pengirim"
+                    android:inputType="textFilter" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_alamat_pengirim"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/alamat"
-                android:inputType="textFilter"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_nama_pengirim"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_no_telp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_alamat_pengirim"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/alamat"
+                    android:inputType="textFilter" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_no_telp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/nomor_telpon"
-                android:inputType="phone"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_alamat_pengirim"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
 
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/jenis_muatan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_no_telp"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/nomor_telpon"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_tanggal_muat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/jenis_muatan"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jenis_muatan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/tanggal_muat"
-                android:inputType="textFilter"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_no_telp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_lokasi_kirim"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_tanggal_muat"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Jenis Muatan (ex: Buah, Sayur)"
+                    android:inputType="textFilter" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tanggal_muat"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/lokasi_kirim"
-                android:inputType="textFilter"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jenis_muatan"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_catatan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_lokasi_kirim"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/tanggal_muat"
+                    android:inputType="textFilter" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_lokasi_kirim"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:hint="@string/catatan"
-                android:inputType="textFilter"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tanggal_muat"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
 
-        <Button
-            android:id="@+id/btn_new_pesanan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_catatan"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/daftar"/>
-    </RelativeLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/lokasi_kirim"
+                    android:inputType="textFilter" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_catatan"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_lokasi_kirim"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="@string/catatan"
+                    android:inputType="textFilter" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_new_pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_catatan"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/daftar" />
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>

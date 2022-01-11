@@ -13,10 +13,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.app.ekspedisimlg.*
-import com.app.ekspedisimlg.fragments.HomeFragment
-import com.app.ekspedisimlg.fragments.HomeSupirFragment
-import com.app.ekspedisimlg.fragments.NotifikasiFragment
-import com.app.ekspedisimlg.fragments.ProfileFragment
+import com.app.ekspedisimlg.fragments.*
 import com.app.ekspedisimlg.helpers.PreferenceHelper.customPreference
 import com.app.ekspedisimlg.helpers.PreferenceHelper.email
 import com.app.ekspedisimlg.helpers.PreferenceHelper.password
@@ -79,6 +76,7 @@ class MainActivity : AppCompatActivity() {
             } else if (checkUserRole() == "supir") {
                 selectedFragment(HomeSupirFragment.getInstance())
             }
+            R.id.pesanan_page -> selectedFragment(NewPesananFragment.getInstance())
             R.id.profil_page -> selectedFragment(ProfileFragment.getInstance())
             R.id.notifikasi_page -> selectedFragment(NotifikasiFragment.getInstance())
         }
