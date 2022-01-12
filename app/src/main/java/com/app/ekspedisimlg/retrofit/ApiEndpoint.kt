@@ -17,16 +17,17 @@ interface ApiEndpoint {
         @Header("role") role: String
     ): Call<ListTarifModel>
 
-    @GET("pesanan")
+    @GET("transaksi")
     fun getPesanan(
         @Header("api-token") api_token: String,
         @Header("role") role: String
     ): Call<PesananModel>
 
-    @POST("pesanan/create")
+    @POST("transaksi/create")
     fun createPesanan(
         @Field("jenis_muatan") jenis_muatan: String,
         @Field("berat_muatan") berat_muatan: String,
+        @Field("tanggal_muat") tanggal: String,
         @Field("lokasi_kirim") lokasi_kirim: String,
         @Field("catatan") catatan: String,
     ): Call<PesananResponseModel>

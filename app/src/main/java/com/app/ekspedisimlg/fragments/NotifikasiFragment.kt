@@ -7,10 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.app.ekspedisimlg.databinding.FragmentNotifikasiBinding
 
-private var _binding: FragmentNotifikasiBinding? = null
-private val binding get() = _binding!!
+
 
 class NotifikasiFragment : Fragment() {
+    // define view binding
+    private var _binding: FragmentNotifikasiBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

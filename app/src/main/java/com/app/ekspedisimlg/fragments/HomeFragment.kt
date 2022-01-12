@@ -12,13 +12,15 @@ import com.app.ekspedisimlg.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-
+    // define view item
     lateinit var buttonListTarif: CardView
     lateinit var buttonTracking: CardView
     lateinit var buttonLokasiKantor: CardView
 
+    // define view binding
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
