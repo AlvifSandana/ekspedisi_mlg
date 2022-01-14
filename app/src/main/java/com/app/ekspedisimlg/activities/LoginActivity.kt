@@ -11,6 +11,7 @@ import com.app.ekspedisimlg.helpers.PreferenceHelper.address
 import com.app.ekspedisimlg.helpers.PreferenceHelper.api_token
 import com.app.ekspedisimlg.helpers.PreferenceHelper.customPreference
 import com.app.ekspedisimlg.helpers.PreferenceHelper.email
+import com.app.ekspedisimlg.helpers.PreferenceHelper.idUser
 import com.app.ekspedisimlg.helpers.PreferenceHelper.name
 import com.app.ekspedisimlg.helpers.PreferenceHelper.name_1
 import com.app.ekspedisimlg.helpers.PreferenceHelper.phone
@@ -66,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
                     Log.d("login_debug", response.body().toString())
 
                     if (status == "success" && message == "Berhasil login (pengirim)"){
+                        prefs.idUser = resdata?.get(0)?.idUser
                         prefs.name = resdata?.get(0)?.nama
                         prefs.address = resdata?.get(0)?.alamat
                         prefs.phone = resdata?.get(0)?.nomor_telpon
@@ -74,6 +76,7 @@ class LoginActivity : AppCompatActivity() {
                         prefs.role = "pengirim"
                         gotoHomeActivity()
                     } else if (status == "success" && message == "Berhasil login (supir)"){
+                        prefs.idUser = resdata?.get(0)?.idUser
                         prefs.name = resdata?.get(0)?.nama
                         prefs.name_1 = resdata?.get(0)?.supir_cadangan
                         prefs.address = resdata?.get(0)?.alamat

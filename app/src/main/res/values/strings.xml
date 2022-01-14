@@ -59,4 +59,5 @@
     <string name="catatan">Catatan :</string>
     <string name="daftar">Daftar</string>
     <string name="icon_button">icon button</string>
+    <string name="icon_description">icon</string>
 </resources>

@@ -6,6 +6,7 @@ data class LoginResponseModel(
     val data: List<Data>
 ) {
     data class Data(
+        val idUser: String,
         val nama: String,
         val supir_cadangan: String?,
         val alamat: String,

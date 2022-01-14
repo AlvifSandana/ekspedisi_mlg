@@ -23,8 +23,12 @@ interface ApiEndpoint {
         @Header("role") role: String
     ): Call<PesananModel>
 
-    @POST("transaksi/create")
+    @FormUrlEncoded
+    @POST("transaksi")
     fun createPesanan(
+        @Header("api-token") api_token: String,
+        @Header("role") role: String,
+        @Field("idPengirim") idPengirim: String,
         @Field("jenis_muatan") jenis_muatan: String,
         @Field("berat_muatan") berat_muatan: String,
         @Field("tanggal_muat") tanggal: String,

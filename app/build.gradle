@@ -58,6 +58,4 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.0.2'
 
-    // livedata
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
 }

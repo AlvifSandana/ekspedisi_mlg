@@ -5,11 +5,9 @@ data class PesananModel (
     val message: String,
     val data: ArrayList<Result>){
     data class Result(
-        val nama: String,
-        val supir_cadangan: String?,
-        val alamat: String,
-        val nomor_telpon: String,
-        val email: String,
-        val api_token: String
+        val berat_muatan: String,
+        val jenis_muatan: String?,
+        val tanggal_muat: String,
+        val lokasi_tujuan: String,
     )
 }

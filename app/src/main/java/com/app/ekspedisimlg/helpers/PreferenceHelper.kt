@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 
 @Suppress("DEPRECATION")
 object PreferenceHelper {
+    val ID_USER = "ID_USER"
     val USER_NAME = "NAME"
     val USER_NAME_1 = "NAME_1"
     val USER_EMAIL = "EMAIL"
@@ -31,6 +32,15 @@ object PreferenceHelper {
         operation(editMe)
         editMe.apply()
     }
+
+    // idUser getter setter
+    var SharedPreferences.idUser
+        get() = getString(ID_USER, "")
+        set(value) {
+            editMe {
+                it.putString(ID_USER, value)
+            }
+        }
 
     // name getter setter
     var SharedPreferences.name
