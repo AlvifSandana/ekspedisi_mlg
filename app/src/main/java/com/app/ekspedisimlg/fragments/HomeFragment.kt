@@ -45,6 +45,9 @@ class HomeFragment : Fragment() {
         buttonListTarif.setOnClickListener {
             gotoFragment(ListTarifFragment())
         }
+        buttonTracking.setOnClickListener {
+            gotoFragment(TrackingFragment())
+        }
     }
 
     private fun gotoFragment(fragment: Fragment) {

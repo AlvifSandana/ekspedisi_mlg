@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.app.ekspedisimlg.*
@@ -21,6 +22,8 @@ import com.app.ekspedisimlg.helpers.PreferenceHelper.role
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    private val REQUEST_PERMISSIONS_REQUEST_CODE = 1;
+
     private val okButtonClick = { dialog: DialogInterface, which: Int ->
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
@@ -101,6 +104,26 @@ class MainActivity : AppCompatActivity() {
             else -> {
                 "error"
             }
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        val permissionsToRequest = ArrayList<String>();
+        var i = 0;
+        while (i < grantResults.size) {
+            permissionsToRequest.add(permissions[i]);
+            i++;
+        }
+        if (permissionsToRequest.size > 0) {
+            ActivityCompat.requestPermissions(
+                this,
+                permissionsToRequest.toTypedArray(),
+                REQUEST_PERMISSIONS_REQUEST_CODE);
         }
     }
 

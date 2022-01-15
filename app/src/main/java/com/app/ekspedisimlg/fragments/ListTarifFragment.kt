@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.fragment_list_tarif.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.net.ConnectException
 
 class ListTarifFragment : Fragment() {
 
@@ -67,6 +68,8 @@ class ListTarifFragment : Fragment() {
                     }
 
                 })
+        } catch (e: ConnectException) {
+            Toast.makeText(requireContext(), "Failed to retrieve data from server.", Toast.LENGTH_LONG).show()
         } catch (e: Exception) {
             Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_LONG).show()
         }
