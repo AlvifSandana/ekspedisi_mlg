@@ -97,7 +97,7 @@
             android:layout_below="@id/label_berat_minimal"
             android:layout_centerHorizontal="true"
             android:text="Cek Tarif"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
     </RelativeLayout>
 
 </ScrollView>

@@ -106,6 +106,7 @@ class NewPesananFragment : Fragment() {
                     response: Response<PesananResponseModel>
                 ) {
                     Log.d("req_response", response.body().toString())
+                    Log.d("log_data", prefs.idUser.toString())
                     if (response.body()?.status == "success") {
                         // tampilkan pesan toast
                         Toast.makeText(

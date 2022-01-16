@@ -21,7 +21,6 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,7 +42,7 @@ class HomeFragment : Fragment() {
             gotoFragment(LokasiFragment())
         }
         buttonListTarif.setOnClickListener {
-            gotoFragment(ListTarifFragment())
+            gotoFragment(CekTarifFragment())
         }
         buttonTracking.setOnClickListener {
             gotoFragment(TrackingFragment())

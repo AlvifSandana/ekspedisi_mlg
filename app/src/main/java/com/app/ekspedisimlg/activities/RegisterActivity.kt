@@ -1,5 +1,6 @@
 package com.app.ekspedisimlg.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +18,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class RegisterActivity : AppCompatActivity() {
+    // define view item
     lateinit var firstname: com.google.android.material.textfield.TextInputLayout
     lateinit var lastname: com.google.android.material.textfield.TextInputLayout
     lateinit var email: com.google.android.material.textfield.TextInputLayout
@@ -116,6 +118,11 @@ class RegisterActivity : AppCompatActivity() {
                                     "${response.body()?.message}\nSilahkan login untuk melanjutkan.",
                                     Toast.LENGTH_SHORT
                                 ).show()
+                                // redirect to login activity
+                                // create intent
+                                val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                                // start activity
+                                startActivity(intent)
                             } else {
                                 Toast.makeText(
                                     this@RegisterActivity,
@@ -127,7 +134,7 @@ class RegisterActivity : AppCompatActivity() {
 
                         override fun onFailure(call: Call<RegisterResponseModel>, t: Throwable) {
                             Log.d("onFailure", t.toString())
-                            Toast.makeText(this@RegisterActivity, t.toString(), Toast.LENGTH_LONG)
+                            Toast.makeText(this@RegisterActivity, "Mohon isikan data dengan benar", Toast.LENGTH_LONG)
                                 .show()
                         }
                     })
@@ -152,6 +159,11 @@ class RegisterActivity : AppCompatActivity() {
                                     "${response.body()?.message}\nSilahkan login untuk melanjutkan.",
                                     Toast.LENGTH_SHORT
                                 ).show()
+                                // redirect to login activity
+                                // create intent
+                                val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                                // start activity
+                                startActivity(intent)
                             } else {
                                 Toast.makeText(
                                     this@RegisterActivity,
@@ -166,7 +178,7 @@ class RegisterActivity : AppCompatActivity() {
                             t: Throwable
                         ) {
                             Log.d("onFailure", t.toString())
-                            Toast.makeText(this@RegisterActivity, t.toString(), Toast.LENGTH_LONG)
+                            Toast.makeText(this@RegisterActivity, "Gagal registrasi, silahkan isikan data dengan benar", Toast.LENGTH_LONG)
                                 .show()
                         }
                     })
